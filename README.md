@@ -8,6 +8,9 @@ Scoreboard
 ---
 
 
+![Scoreboard](src/img/screen.png)
+
+
 Get started
 -----------
 
