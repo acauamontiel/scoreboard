@@ -1,0 +1,40 @@
+extends layouts/default
+
+block content
+	main.scoreboard
+		h1.sb-title Scoreboard
+
+		section.sb-players
+			article.sb-player.sb-player-a
+				h2.sb-heading(contenteditable="true") Player 1
+
+				#points-1.sb-panel(data-panel="points-1")
+					.sb-panel-digit 00
+					a.sb-button.sb-button-less(href="javascript:;") -
+					a.sb-button.sb-button-more(href="javascript:;") +
+
+				h3.sb-text Points
+
+				#set-1.sb-panel.sb-panel-small(data-panel="set-1")
+					.sb-panel-digit 00
+					a.sb-button.sb-button-less(href="javascript:;") -
+					a.sb-button.sb-button-more(href="javascript:;") +
+
+				h3.sb-text Sets
+
+			article.sb-player.sb-player-b
+				h2.sb-heading(contenteditable="true") Player 2
+
+				#points-2.sb-panel(data-panel="points-2")
+					.sb-panel-digit 00
+					a.sb-button.sb-button-less(href="javascript:;") -
+					a.sb-button.sb-button-more(href="javascript:;") +
+
+				h3.sb-text Points
+
+				#set-2.sb-panel.sb-panel-small(data-panel="set-2")
+					.sb-panel-digit 00
+					a.sb-button.sb-button-less(href="javascript:;") -
+					a.sb-button.sb-button-more(href="javascript:;") +
+
+				h3.sb-text Sets

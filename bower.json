@@ -1,0 +1,20 @@
+{
+  "name": "scoreboard",
+  "version": "1.0.0-beta1",
+  "authors": [
+    "Acauã Montiel <contato@acauamontiel.com.br>"
+  ],
+  "description": "A veeery simple scoreboard to count the points of ping pong in our office",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "~1.1.4"
+  }
+}

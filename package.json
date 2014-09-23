@@ -1,0 +1,25 @@
+{
+  "name": "scoreboard",
+  "version": "1.0.0-beta1",
+  "description": "A veeery simple scoreboard to count the points of ping pong in our office",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "author": "Acauã Montiel <contato@acauamontiel.com.br>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.6.2",
+    "browser-sync": "^0.9.1",
+    "gulp-jshint": "^1.6.1",
+    "gulp-uglify": "^0.3.0",
+    "gulp-jade": "^0.5.0",
+    "gulp-stylus": "^1.0.2",
+    "nib": "^1.0.2",
+    "gulp-imagemin": "^0.6.1"
+  }
+}

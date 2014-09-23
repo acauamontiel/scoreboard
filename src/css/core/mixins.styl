@@ -1,0 +1,43 @@
+/*
+ * Clearfix
+ * Browser support: IE 9.0+, Chrome 1.0+, Firefox 3.5+, Opera 10.5+, Safari 3.1+
+ */
+clearfix()
+	&:before,
+	&:after
+		content ' '
+		display table
+
+	&:after
+		clear both
+
+
+/*
+ * Font-face mixin
+ */
+font-face($family, $file, $weight = 'normal')
+	$font-url = '../font/'
+
+	@font-face
+		font-family $family
+		font-weight $weight
+		font-style normal
+		src url($font-url + $file + '.eot')
+		src url($font-url + $file + '.eot?#iefix') format('embedded-opentype'), url($font-url + $file + '.woff') format('woff'), url($font-url + $file + '.ttf') format('truetype'), url($font-url + $file + '.svg#' + $file) format('svg')
+
+
+/*
+ * Position mixin
+ * https://gist.github.com/acauamontiel/48c077c13d7c5c4f022f
+ */
+position()
+	if arguments is center
+		position absolute
+		top 50%
+		left 50%
+		transform translate(-50%, -50%)
+	else if arguments is fixed
+		position fixed
+		transform translateZ(0)
+	else
+		position arguments
