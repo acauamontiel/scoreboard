@@ -62,23 +62,6 @@ app.player = function () {
 		}
 		togglePoints.call($parent, $this.hasClass('sb-button-more'));
 	});
-
-	$('.sb-title').on('click', function () {
-		var i = $('body')[0];
-		if (i.requestFullscreen) {
-			i.requestFullscreen();
-		} else if (i.webkitRequestFullscreen) {
-			i.webkitRequestFullscreen();
-		} else if (i.mozRequestFullScreen) {
-			i.mozRequestFullScreen();
-		} else if (i.msRequestFullscreen) {
-			i.msRequestFullscreen();
-		}
-	});
-
-	if ('ontouchstart' in window) {
-		$('html').addClass('is-touch');
-	}
 };
 
 
@@ -87,8 +70,26 @@ app.player = function () {
  * @memberof app
  */
 app.init = function () {
-	app.player();
+	$(function () {
+		app.player();
 
+		if ('ontouchstart' in window) {
+			$('html').addClass('is-touch');
+		}
+
+		$('.sb-title').on('click', function () {
+			var i = $('body')[0];
+			if (i.requestFullscreen) {
+				i.requestFullscreen();
+			} else if (i.webkitRequestFullscreen) {
+				i.webkitRequestFullscreen();
+			} else if (i.mozRequestFullScreen) {
+				i.mozRequestFullScreen();
+			} else if (i.msRequestFullscreen) {
+				i.msRequestFullscreen();
+			}
+		});
+	});
 };
 
 
